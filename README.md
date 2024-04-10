@@ -16,6 +16,7 @@ To get started with these projects, make sure you have the following:
 
 ```bash
 git clone https://github.com/kavyaballa/javascript-beginner-projects.git
+```
 
 2. Navigate to the project directory:
 
