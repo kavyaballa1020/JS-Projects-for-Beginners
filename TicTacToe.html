@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #151515;
+      color: #fff;
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      height: 100vh; /* Full height of viewport */
+      margin: 0; /* Remove default margin */
+    }
+    .square {
+      width: 100px;
+      height: 100px;
+      font-size: 50px;
+      text-align: center;
+      cursor: pointer; 
+      border: 5px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+    .square:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+    h1 {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 60px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+    }
+    .highlight {
+      color: #ffc107; /* Change color to yellow */
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TIC TAC TOE</h1>
+    <div class="row justify-content-center"> 
+      <div class="col-md-6">
+        <div class="board border p-3 bg-transparent"> 
+          <div class="row">
+            <div class="col-4 square border" onclick="makeMove(0)"></div> 
+            <div class="col-4 square border border-left-0 border-right-0" onclick="makeMove(1)"></div> 
+            <div class="col-4 square border" onclick="makeMove(2)"></div>
+          </div>
+          <div class="row border-top">
+            <div class="col-4 square border border-top-0" onclick="makeMove(3)"></div> 
+            <div class="col-4 square border border-top-0 border-left-0 border-right-0" onclick="makeMove(4)"></div>
+            <div class="col-4 square border border-top-0" onclick="makeMove(5)"></div>
+          </div>
+          <div class="row">
+            <div class="col-4 square border" onclick="makeMove(6)"></div>
+            <div class="col-4 square border border-left-0 border-right-0" onclick="makeMove(7)"></div>
+            <div class="col-4 square border" onclick="makeMove(8)"></div>
+          </div>
+        </div>
+        <div id="main"></div>
+        <div id="status" class="text-center mt-3"></div>
+        <button class="btn btn-primary btn-block mt-3" onclick="resetGame()" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+          Reset Game
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    let currentPlayer = 'X';
+    let board = ['', '', '', '', '', '', '', '', ''];
+    let gameActive = true;
+
+    const checkWin = () => {
+      const winConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+      ];
+
+      for (let condition of winConditions) {
+        const [a, b, c] = condition;
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+          gameActive = false;
+          return board[a];
+        }
+      }
+
+      if (!board.includes('')) {
+        gameActive = false;
+        return 'draw';
+      }
+
+      return null;
+    };
+
+    const handleResult = (result) => {
+        let resultDiv=document.querySelector("#main");
+      if (result === 'draw') {
+        resultDiv.innerHTML = 'It is a Draw';
+        resultDiv.className = 'alert alert-info';
+
+      } else {
+        setStatus(`Player <span class="highlight">${result}</span> wins!`);
+      }
+    };
+
+    const setStatus = (message) => {
+      document.getElementById('status').innerHTML = message;
+    };
+
+    const makeMove = (index) => {
+      if (gameActive && !board[index]) {
+        board[index] = currentPlayer;
+        document.getElementsByClassName('square')[index].innerText = currentPlayer;
+        
+        const winner = checkWin();
+        if (winner) {
+          handleResult(winner);
+        } else {
+          currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+          setStatus(`Player ${currentPlayer}'s turn`);
+        }
+      }
+    };
+
+    const resetGame = () => {
+      currentPlayer = 'X';
+      board = ['', '', '', '', '', '', '', '', ''];
+      gameActive = true;
+      setStatus(`Player ${currentPlayer}'s turn`);
+      document.querySelectorAll('.square').forEach(square => square.innerText = '');
+    };
+
+    setStatus(`Player ${currentPlayer}'s turn`);
+  </script>
+</body>
+</html>

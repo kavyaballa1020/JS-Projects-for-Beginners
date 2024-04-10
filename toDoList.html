@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5" id="div1">
+    <h1 class="text-center mb-4">To-Do List</h1>
+    <form>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="task" placeholder="Add a new task" aria-label="Add a new task" name="task1" aria-describedby="button-addon2" required>
+        <button class="btn btn-primary" type="submit" id="button1">Add</button>
+      </div>
+    </form>
+  </div>
+  <div class="container mt-5">
+    <button id="clear" class="btn btn-warning">Clear All</button>
+  </div>
+  
+  <div class="container mt-5" id="main">
+  
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    let form = document.querySelector("#div1 form");
+    let main = document.querySelector('#main');
+    let clear = document.querySelector('#clear');
+
+     
+    form.addEventListener("submit", (event) => {
+        let task1 = event.target.elements.task1.value;
+        let timestamp = new Date().toLocaleString();
+
+        let tasks = JSON.parse(localStorage.getItem('taskList')) ?? [];
+        tasks.push({
+            'task1': task1,
+            'timestamp': timestamp
+        });
+        localStorage.setItem('taskList', JSON.stringify(tasks));
+        event.target.reset();
+        display();
+        event.preventDefault();
+    });
+
+    clear.addEventListener('click', () => {
+        localStorage.removeItem('taskList');
+        display();
+    });
+    let display = () => {
+      let tasks = JSON.parse(localStorage.getItem('taskList')) ?? [];
+      let finalTask = "";
+      tasks.forEach((task, i) => {
+          finalTask += `
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" value="${task.task1} - ${task.timestamp}" aria-label="Add a new task" aria-describedby="button-addon2">
+            <button onclick="removeData(${i})" class="btn btn-danger" type="button" id="button2">Remove</button>
+          </div>`;
+         });
+      main.innerHTML = finalTask;
+  };
+  
+  let removeData = (index) => {
+      let tasks = JSON.parse(localStorage.getItem('taskList')) ?? [];
+      tasks.splice(index, 1);
+      localStorage.setItem('taskList', JSON.stringify(tasks));
+      display();
+  }
+
+    window.onload = () => {
+        display();
+    };
+</script>
+
+</body>
+</html>

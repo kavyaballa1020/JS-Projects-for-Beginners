@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .quote-text {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">Random Quote</div>
+    <div class="quote-text" id="quoteText"></div>
+    <button class="btn" onclick="generateQuote()">Generate Quote</button>
+  </div>
+</div>
+
+<script>
+  const quotes = [
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Innovation distinguishes between a leader and a follower. - Steve Jobs",
+    "Stay hungry, stay foolish. - Steve Jobs",
+    "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+    "Design is not just what it looks like and feels like. Design is how it works. - Steve Jobs",
+    "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+    "The way to get started is to quit talking and begin doing. - Walt Disney",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+    "It does not matter how slowly you go as long as you do not stop. - Confucius",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt"
+  ];
+
+  function generateQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomQuote = quotes[randomIndex];
+    document.getElementById("quoteText").innerText = randomQuote;
+  }
+</script>
+
+</body>
+</html>
