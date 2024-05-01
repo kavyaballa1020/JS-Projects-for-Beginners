@@ -15,7 +15,7 @@ To get started with these projects, make sure you have the following:
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/kavyaballa/javascript-beginner-projects.git
+git clone https://github.com/kavyaballa1020/JS-Projects-for-Beginners.git
 ```
 
 2. Navigate to the project directory:
