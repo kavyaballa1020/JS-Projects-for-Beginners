@@ -21,7 +21,7 @@ git clone https://github.com/kavyaballa1020/JS-Projects-for-Beginners.git
 2. Navigate to the project directory:
 
 ```
-cd javascript-beginner-projects
+cd JS-Projects-for-Beginners
 ```
 
 3. Choose a project you want to work on from the list of directories.
