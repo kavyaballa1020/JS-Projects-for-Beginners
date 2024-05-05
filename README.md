@@ -1,5 +1,11 @@
 # JavaScript Beginner Projects
 
+
+
+
+
+
+
 Welcome to the JavaScript Beginner Projects repository! This repository is aimed at helping beginners learn JavaScript through practical projects. Each project is designed to cover different aspects of JavaScript programming and gradually build your skills.
 
 ## Getting Started
