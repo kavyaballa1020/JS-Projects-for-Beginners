@@ -4,6 +4,13 @@ Welcome to the JavaScript Beginner Projects repository! This repository is aimed
 
 ## Getting Started
 
+
+
+
+
+
+
+
 To get started with these projects, make sure you have the following:
 
 - Basic understanding of HTML, CSS, and JavaScript.
