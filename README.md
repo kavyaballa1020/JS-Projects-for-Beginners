@@ -5,13 +5,6 @@ Welcome to the JavaScript Beginner Projects repository! This repository is aimed
 
 To get started with these projects, make sure you have the following:
 
-
-
-
-
-
-
-
 - Basic understanding of HTML, CSS, and JavaScript.
 - A text editor or an IDE (Integrated Development Environment) like Visual Studio Code, Sublime Text, or Atom.
 - Node.js and npm installed on your machine if required by any project.
