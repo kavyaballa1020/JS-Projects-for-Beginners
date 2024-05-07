@@ -10,14 +10,6 @@ To get started with these projects, make sure you have the following:
 - Node.js and npm installed on your machine if required by any project.
 
 ## How to Use
-
-
-
-
-
-
-
-
 1. Clone this repository to your local machine:
 
 ```bash
