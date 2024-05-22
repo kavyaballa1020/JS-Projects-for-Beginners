@@ -88,8 +88,12 @@
 
   function calculate() {
     let expression = document.getElementById("display").value;
-    let result = eval(expression);
-    document.getElementById("display").value = result;
+    try {
+      let result = eval(expression);
+      document.getElementById("display").value = result;
+    } catch (error) {
+      document.getElementById("display").value = "Error";
+    }
   }
 
   function clearDisplay() {
