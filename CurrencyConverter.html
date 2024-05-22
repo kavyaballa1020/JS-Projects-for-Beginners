@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
       <div class="col-md-4">
         <div class="input-group mb-3">
-          <input type="number" id="amountInput" class="form-control" placeholder="Enter amount">
+          <input type="number" id="amountInput" class="form-control" placeholder="Enter amount" min="0" step="any">
           <div class="input-group-append">
             <select id="fromCurrency" class="form-control">
               <option value="USD">USD</option>
@@ -54,17 +54,21 @@
       const fromCurrency = document.getElementById("fromCurrency").value;
       const toCurrency = document.getElementById("toCurrency").value;
 
-      fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+      if (amountInput === "" || isNaN(amountInput) || amountInput <= 0) {
+        alert("Please enter a valid amount");
+        return;
+      }
 
+      fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
         .then(response => response.json())
         .then(data => {
-            const exchangerate=data.rates[toCurrency];
-            const result=amountInput*exchangerate;
-            document.getElementById("result").value=result.toFixed(2);
+            const exchangeRate = data.rates[toCurrency];
+            const result = amountInput * exchangeRate;
+            document.getElementById("result").value = result.toFixed(2);
         })
-        .catch(err =>{
-            console.log(error);
-        })
+        .catch(err => {
+            console.error("Error fetching exchange rate:", err);
+        });
     }
   </script>
 </body>
