@@ -107,7 +107,7 @@
     }
 
     .feedback {
-      display: none;
+      display: none; /* Initially hide the feedback container */
       margin-top: 20px;
       text-align: center;
     }
@@ -151,7 +151,7 @@
     <p id="output"></p>
     <div class="feedback">
       <textarea placeholder="Enter your feedback here..."></textarea>
-      <button id="btnFeedback">Submit Feedback</button>
+      <button id="btnFeedback">Give Feedback</button>
     </div>
   </div>
 
@@ -185,7 +185,7 @@
           selectedCount++;
         }
       });
-
+    
       let ratingText = '';
       let color = '#000';
       switch(selectedCount) {
@@ -212,29 +212,17 @@
         default:
           ratingText = 'No rating selected';
       }
-
+    
       output.innerText = ratingText;
       output.style.color = color;
-
+    
       rates.forEach((rate) => {
         rate.disabled = true;
       });
-
+    
       feedbackContainer.style.display = 'block'; // Show the feedback container when the rate button is clicked
     });
-
-    btnFeedback.addEventListener('click', () => {
-      let feedback = textarea.value.trim();
-
-      if (feedback === "") {
-        output.innerText = 'Please give your feedback';
-        output.style.color = '#ff0000';
-      } else {
-        output.innerText = 'Thanks for giving your feedback';
-        output.style.color = '#008000';
-        textarea.value = ''; // Clear the textarea after submission
-      }
-    });
+    
   </script>
 </body>
 </html>
