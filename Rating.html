@@ -63,7 +63,7 @@
       cursor: not-allowed;
     }
 
-    #btnRate, #btnFeedback {
+    #btnRate {
       display: block;
       margin: 0 auto 10px;
       padding: 10px 20px;
@@ -76,7 +76,24 @@
       font-size: 1rem;
     }
 
-    #btnRate:hover, #btnFeedback:hover {
+    #btnRate:hover {
+      background-color: #08005d;
+    }
+
+    #btnFeedback {
+      display: none;
+      margin: 10px auto 0;
+      padding: 10px 20px;
+      background-color: #2b00ff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    #btnFeedback:hover {
       background-color: #08005d;
     }
 
@@ -118,11 +135,11 @@
       <label for="star-5"></label>
     </div>
     <button id="btnRate">Submit</button>
+    <p id="output"></p>
     <button id="btnFeedback">Give Feedback</button>
     <div class="feedback">
       <textarea placeholder="Enter your feedback here..."></textarea>
     </div>
-    <p id="output"></p>
   </div>
 
   <script>
@@ -189,6 +206,9 @@
       rates.forEach((rate) => {
         rate.disabled = true;
       });
+
+      // Show the Give Feedback button
+      btnFeedback.style.display = 'block';
     });
 
     btnFeedback.addEventListener('click', () => {
