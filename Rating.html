@@ -112,6 +112,8 @@
       margin-top: 20px;
       margin-right: 20px;
       text-align: center;
+      font-weight: bolder;
+      font-size: 18px;
     }
 
     .feedback textarea {
@@ -121,15 +123,15 @@
       border-radius: 15px;
       font-size: 1rem;
       resize: none;
-      border-color: #2b00ff;
+      border: 3px solid blue;
       transition: border-color 0.3s ease;
       margin-bottom: 10px; /* Add some spacing between textarea and button */
     }
 
     .feedback textarea:focus {
       outline: none;
-      background-color: black;
-      color: white;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       border: none;
     }
   </style>
@@ -194,23 +196,23 @@
       let color = '#000';
       switch (selectedCount) {
         case 1:
-          ratingText = 'Status : VERY POOR';
+          ratingText = 'Status : VERY POOR☹️';
           color = '#ff0000';
           break;
         case 2:
-          ratingText = 'Status : POOR';
+          ratingText = 'Status : POOR😐';
           color = '#ff6666';
           break;
         case 3:
-          ratingText = 'Status : OK';
+          ratingText = 'Status : OK🙂';
           color = '#ff9999';
           break;
         case 4:
-          ratingText = 'Status : GOOD';
+          ratingText = 'Status : GOOD😇';
           color = '#00ff00';
           break;
         case 5:
-          ratingText = 'Status : VERY GOOD';
+          ratingText = 'Status : VERY GOOD🤩';
           color = '#008000';
           break;
         default:
@@ -231,11 +233,11 @@
     btnFeedback.addEventListener('click', () => {
       const feedback = feedbackTextarea.value.trim();
       if (feedback) {
-        feedbackMessage.innerText = 'Thanks for giving your feedback!';
+        feedbackMessage.innerText = 'Thanks for giving your feedback🥳';
         feedbackMessage.style.color = 'green';
         feedbackTextarea.value="";
       } else {
-        feedbackMessage.innerText = 'Please give your feedback.';
+        feedbackMessage.innerText = 'Please give your feedback🙁';
         feedbackMessage.style.color = 'red';
       }
     });
