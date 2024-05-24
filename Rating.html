@@ -51,7 +51,11 @@
       transition: color 0.3s ease;
     }
 
-    .rating-container input[type="radio"]:checked ~ label:before {
+    .rating-container input[type="radio"]:checked + label:before {
+      color: #ffd700; 
+    }
+
+    .rating-container input[type="radio"]:checked + label {
       color: #ffd700; 
     }
 
@@ -82,26 +86,16 @@
   <div class="container">
     <h1>Rate the Service</h1>
     <div class="rating-container">
-      <label for="very-poor">
-        <input type="radio" name="rate" value="Very poor" id="very-poor">
-        Very Poor
-      </label>
-      <label for="poor">
-        <input type="radio" name="rate" value="Poor" id="poor">
-        Poor
-      </label>
-      <label for="ok">
-        <input type="radio" name="rate" value="OK" id="ok">
-        OK
-      </label>
-      <label for="good">
-        <input type="radio" name="rate" value="Good">
-        Good
-      </label>
-      <label for="very-good">
-        <input type="radio" name="rate" value="Very Good" id="very-good">
-        Very Good
-      </label>
+      <input type="radio" name="rate" value="Very poor" id="very-poor">
+      <label for="very-poor">Very Poor</label>
+      <input type="radio" name="rate" value="Poor" id="poor">
+      <label for="poor">Poor</label>
+      <input type="radio" name="rate" value="OK" id="ok">
+      <label for="ok">OK</label>
+      <input type="radio" name="rate" value="Good" id="good">
+      <label for="good">Good</label>
+      <input type="radio" name="rate" value="Very Good" id="very-good">
+      <label for="very-good">Very Good</label>
     </div>
     <button id="btnRate">Submit</button>
     <p id="output"></p>
