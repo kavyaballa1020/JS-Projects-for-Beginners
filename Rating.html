@@ -150,9 +150,9 @@
     </div>
     <button id="btnRate">Submit</button>
     <p id="output"></p>
-    <button id="btnFeedback">Give Feedback</button>
     <div class="feedback">
       <textarea placeholder="Enter your feedback here..."></textarea>
+      <button id="btnFeedback">Submit Feedback</button>
     </div>
   </div>
 
@@ -221,7 +221,6 @@
         rate.disabled = true;
       });
 
-      btnFeedback.style.display = 'block';
       feedbackContainer.style.display = 'block'; // Show the feedback container when the rate button is clicked
     });
 
