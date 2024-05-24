@@ -38,9 +38,10 @@
       color: #4a4a4a;
       font-weight: bold;
       cursor: pointer;
+      position: relative;
     }
 
-    .rating-container input[type="radio"] {
+    .rating-container input[type="checkbox"] {
       display: none;
     }
 
@@ -49,13 +50,12 @@
       font-size: 24px;
       color: #ccc;
       transition: color 0.3s ease;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .rating-container input[type="radio"]:checked + label:before {
-      color: #ffd700; 
-    }
-
-    .rating-container input[type="radio"]:checked + label {
+    .rating-container input[type="checkbox"]:checked + label:before {
       color: #ffd700; 
     }
 
@@ -86,16 +86,16 @@
   <div class="container">
     <h1>Rate the Service</h1>
     <div class="rating-container">
-      <input type="radio" name="rate" value="Very poor" id="very-poor">
-      <label for="very-poor">Very Poor</label>
-      <input type="radio" name="rate" value="Poor" id="poor">
-      <label for="poor">Poor</label>
-      <input type="radio" name="rate" value="OK" id="ok">
-      <label for="ok">OK</label>
-      <input type="radio" name="rate" value="Good" id="good">
-      <label for="good">Good</label>
-      <input type="radio" name="rate" value="Very Good" id="very-good">
-      <label for="very-good">Very Good</label>
+      <input type="checkbox" name="rate" value="1" id="star-1">
+      <label for="star-1"></label>
+      <input type="checkbox" name="rate" value="2" id="star-2">
+      <label for="star-2"></label>
+      <input type="checkbox" name="rate" value="3" id="star-3">
+      <label for="star-3"></label>
+      <input type="checkbox" name="rate" value="4" id="star-4">
+      <label for="star-4"></label>
+      <input type="checkbox" name="rate" value="5" id="star-5">
+      <label for="star-5"></label>
     </div>
     <button id="btnRate">Submit</button>
     <p id="output"></p>
@@ -107,11 +107,35 @@
 
     btn.addEventListener('click', () => {
       let rates = document.getElementsByName('rate');
+      let selectedCount = 0;
       rates.forEach((rate) => {
         if (rate.checked) {
-          output.innerText = `You selected: ${rate.value}`;
+          selectedCount++;
         }
       });
+
+      let ratingText = '';
+      switch(selectedCount) {
+        case 1:
+          ratingText = 'Very Poor';
+          break;
+        case 2:
+          ratingText = 'Poor';
+          break;
+        case 3:
+          ratingText = 'OK';
+          break;
+        case 4:
+          ratingText = 'Good';
+          break;
+        case 5:
+          ratingText = 'Very Good';
+          break;
+        default:
+          ratingText = 'No rating selected';
+      }
+
+      output.innerText = `You selected: ${selectedCount} star(s) - ${ratingText}`;
     });
   </script>
 </body>
