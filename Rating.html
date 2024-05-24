@@ -64,7 +64,7 @@
       cursor: not-allowed;
     }
 
-    #btnRate {
+    #btnRate , #btnFeedback{
       display: block;
       margin: 0 auto 10px;
       padding: 10px 20px;
@@ -83,19 +83,7 @@
       background-color: #08005d;
     }
 
-    #btnFeedback {
-      display: none; /* Initially hide the "Give Feedback" button */
-      margin: 10px auto 0;
-      padding: 10px 20px;
-      background-color: #2b00ff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 1rem;
-    }
-
+   
     #btnFeedback:hover {
       background-color: #08005d;
     }
@@ -123,7 +111,7 @@
       border-radius: 15px;
       font-size: 1rem;
       resize: none;
-      border: 3px solid blue;
+      border: 1px solid blue;
       transition: border-color 0.3s ease;
       margin-bottom: 10px; /* Add some spacing between textarea and button */
     }
@@ -133,6 +121,9 @@
       background-color: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
       border: none;
+      border: 1px solid blue;
+      box-shadow: 0 2px 4px blue;
+
     }
   </style>
 </head>
