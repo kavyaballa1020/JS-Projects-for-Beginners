@@ -214,12 +214,10 @@
       output.innerText = ratingText;
       output.style.color = color;
 
-      // Disable all checkboxes after submission
       rates.forEach((rate) => {
         rate.disabled = true;
       });
 
-      // Show the Give Feedback button
       btnFeedback.style.display = 'block';
     });
 
