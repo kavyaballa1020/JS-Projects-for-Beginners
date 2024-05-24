@@ -57,6 +57,7 @@
     .rating-container input[type="checkbox"]:checked + label:before,
     .rating-container input[type="checkbox"]:hover + label:before {
       color: #ffd700;
+      text-shadow: 0 2px 4px rgb(255, 217, 0);
     }
 
     .rating-container input[type="checkbox"]:disabled + label:before {
@@ -69,11 +70,13 @@
       padding: 10px 20px;
       background-color: #2b00ff;
       color: #fff;
+      box-shadow: 0 4px 8px blue;
       border: none;
-      border-radius: 4px;
+      border-radius: 20px;
       cursor: pointer;
       transition: background-color 0.3s ease;
       font-size: 1rem;
+      font-weight: bolder;
     }
 
     #btnRate:hover {
@@ -149,7 +152,7 @@
     <button id="btnRate">Submit</button>
     <p id="output"></p>
     <div class="feedback">
-      <textarea placeholder="Enter your feedback here..."></textarea>
+      <textarea placeholder="Enter your feedback for above status here..."></textarea>
       <button id="btnFeedback">Give Feedback</button>
       <p id="feedbackMessage"></p>
     </div>
@@ -191,23 +194,23 @@
       let color = '#000';
       switch (selectedCount) {
         case 1:
-          ratingText = 'Very Poor';
+          ratingText = 'Status : VERY POOR';
           color = '#ff0000';
           break;
         case 2:
-          ratingText = 'Poor';
+          ratingText = 'Status : POOR';
           color = '#ff6666';
           break;
         case 3:
-          ratingText = 'OK';
+          ratingText = 'Status : OK';
           color = '#ff9999';
           break;
         case 4:
-          ratingText = 'Good';
+          ratingText = 'Status : GOOD';
           color = '#00ff00';
           break;
         case 5:
-          ratingText = 'Very Good';
+          ratingText = 'Status : VERY GOOD';
           color = '#008000';
           break;
         default:
