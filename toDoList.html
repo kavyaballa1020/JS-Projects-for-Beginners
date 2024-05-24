@@ -36,7 +36,6 @@
     form.addEventListener("submit", (event) => {
         let task1 = event.target.elements.task1.value;
         let timestamp = new Date().toLocaleString();
-
         let tasks = JSON.parse(localStorage.getItem('taskList')) ?? [];
         tasks.push({
             'task1': task1,
