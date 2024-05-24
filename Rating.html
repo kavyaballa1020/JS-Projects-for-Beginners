@@ -48,7 +48,7 @@
     }
 
     .rating-container label:before {
-      content: "\f005"; /* FontAwesome star icon */
+      content: "\f005"; 
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       transition: color 0.3s ease;
@@ -96,7 +96,7 @@
     }
 
     .feedback {
-      display: none; /* Initially hide the textarea container */
+      display: none; 
       margin-top: 20px;
       margin-right: 20px;
       text-align: center;
@@ -113,7 +113,7 @@
       resize: none;
       border: 1px solid blue;
       transition: border-color 0.3s ease;
-      margin-bottom: 10px; /* Add some spacing between textarea and button */
+      margin-bottom: 10px; 
     }
 
     .feedback textarea:focus {
@@ -217,8 +217,8 @@
         rate.disabled = true;
       });
 
-      btnFeedback.style.display = 'block'; // Show the "Give Feedback" button
-      feedbackContainer.style.display = 'block'; // Show the feedback container
+      btnFeedback.style.display = 'block'; 
+      feedbackContainer.style.display = 'block'; 
     });
 
     btnFeedback.addEventListener('click', () => {
