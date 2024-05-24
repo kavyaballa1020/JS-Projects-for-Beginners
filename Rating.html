@@ -161,6 +161,7 @@
     let btnFeedback = document.getElementById('btnFeedback');
     let output = document.getElementById('output');
     let feedbackContainer = document.querySelector('.feedback');
+    let textarea = feedbackContainer.querySelector('textarea');
 
     document.querySelectorAll('.rating-container input[type="checkbox"]').forEach((checkbox, index, checkboxes) => {
       checkbox.addEventListener('change', () => {
@@ -221,10 +222,20 @@
       });
 
       btnFeedback.style.display = 'block';
+      feedbackContainer.style.display = 'block'; // Show the feedback container when the rate button is clicked
     });
 
     btnFeedback.addEventListener('click', () => {
-      feedbackContainer.style.display = 'block';
+      let feedback = textarea.value.trim();
+
+      if (feedback === "") {
+        output.innerText = 'Please give your feedback';
+        output.style.color = '#ff0000';
+      } else {
+        output.innerText = 'Thanks for giving your feedback';
+        output.style.color = '#008000';
+        textarea.value = ''; // Clear the textarea after submission
+      }
     });
   </script>
 </body>
