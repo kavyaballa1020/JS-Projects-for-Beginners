@@ -81,6 +81,7 @@
     }
 
     #btnFeedback {
+      display: none; /* Initially hide the "Give Feedback" button */
       margin: 10px auto 0;
       padding: 10px 20px;
       background-color: #2b00ff;
@@ -104,6 +105,7 @@
     }
 
     .feedback {
+      display: none; /* Initially hide the textarea container */
       margin-top: 20px;
       margin-right: 20px;
       text-align: center;
@@ -118,6 +120,7 @@
       resize: none;
       border-color: #2b00ff;
       transition: border-color 0.3s ease;
+      margin-bottom: 10px; /* Add some spacing between textarea and button */
     }
 
     .feedback textarea:focus {
@@ -145,9 +148,10 @@
     </div>
     <button id="btnRate">Submit</button>
     <p id="output"></p>
-    <button id="btnFeedback">Give Feedback</button>
     <div class="feedback">
       <textarea placeholder="Enter your feedback here..."></textarea>
+      <button id="btnFeedback">Give Feedback</button>
+      <p id="feedbackMessage"></p>
     </div>
   </div>
 
@@ -156,6 +160,8 @@
     let btnFeedback = document.getElementById('btnFeedback');
     let output = document.getElementById('output');
     let feedbackContainer = document.querySelector('.feedback');
+    let feedbackMessage = document.getElementById('feedbackMessage');
+    let feedbackTextarea = feedbackContainer.querySelector('textarea');
 
     document.querySelectorAll('.rating-container input[type="checkbox"]').forEach((checkbox, index, checkboxes) => {
       checkbox.addEventListener('change', () => {
@@ -217,6 +223,18 @@
 
       btnFeedback.style.display = 'block'; // Show the "Give Feedback" button
       feedbackContainer.style.display = 'block'; // Show the feedback container
+    });
+
+    btnFeedback.addEventListener('click', () => {
+      const feedback = feedbackTextarea.value.trim();
+      if (feedback) {
+        feedbackMessage.innerText = 'Thanks for giving your feedback!';
+        feedbackMessage.style.color = 'green';
+        feedbackTextarea.innerHTML="";
+      } else {
+        feedbackMessage.innerText = 'Please give your feedback.';
+        feedbackMessage.style.color = 'red';
+      }
     });
   </script>
 </body>
