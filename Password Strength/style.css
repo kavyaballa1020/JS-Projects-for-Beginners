@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    color: white; 
+    font-family: Arial, sans-serif; 
+}
+
+input.custom-input {
+    width: 300px; 
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 600px;
+    font-size: 20px;
+    padding: 10px; 
+    border: 2px solid #666; 
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    outline: none; 
+    background-color: black;
+    color: white;
+}
+
+input.custom-input:focus {
+    border-color: #5107fc; 
+    box-shadow: 0 0 5px #2f0f86; 
+}
+
+#main {
+    width: 300px; 
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 600px;
+    font-size: 25px;
+    text-align: center; 
+    line-height: 40px; 
+    border-radius: 10px;
+}
+
+#main.weak {
+    background-color: #ffcccc; 
+    color: #ff0000; 
+}
+#main.medium {
+    background-color: #ffffcc; 
+    color: #ffcc00; 
+}
+#main.strong {
+    background-color: #ccffcc; 
+    color: #009900; 
+}
+#toggleBtn{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    font-size:  18px;
+    margin-left: 5px;
+  
+}
+#toggleBtn:focus{
+    box-shadow: 0 0 10px yellow;
+}
+h1 {
+text-align: center;
+margin-top: 30px;
+font-family: "Algerian", serif;
+font-size: 48px;
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
