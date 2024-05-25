@@ -1,0 +1,70 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e8f0ff, #f8f9fa);
+  }
+  
+  .container {
+    max-width: 900px;
+    margin-top: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.396);
+    border-radius: 20px;
+    background-color: #fff;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+  }
+  
+  #userInput {
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    transition: border-color 0.3s ease-in-out;
+
+  }
+  
+  #userInput:hover {
+    border-color: #0056b3;
+  }
+  
+  #userInput:focus {
+    outline: none;
+    box-shadow: 0 0 7px #007bff;
+  }
+  
+  #demo {
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card {
+    margin: 0 auto; 
+    border-radius: 20px ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.504);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .card-body {
+    background-color: #fff;
+  }
