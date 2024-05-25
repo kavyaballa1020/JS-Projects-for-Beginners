@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+#quote {
+    margin-top: 50px;
+    font-size: 24px;
+}
+#author {
+    margin-top: 10px;
+    font-style: italic;
+}
+#new-quote-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#new-quote-btn:hover {
+    background-color: #0056b3;
+}
