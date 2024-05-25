@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess Number Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            text-align: center;
-            margin-top: 50px;
-        }
-        #result {
-            margin-top: 20px;
-        }
-    </style>  
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container mt-5">
@@ -27,30 +19,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        const randomNumber = Math.floor(Math.random() * 100) + 1;
-        let attempts = 0;
-
-        document.getElementById('submitGuess').addEventListener('click', function() {
-            const guess = parseInt(document.getElementById('guessInput').value);
-            if (!isNaN(guess)) {
-                attempts++;
-                const resultDiv = document.getElementById('result');
-                if (guess === randomNumber) {
-                    resultDiv.innerHTML = `Congratulations! You guessed the correct number ${randomNumber} in ${attempts} attempts.`;
-                    resultDiv.className = 'alert alert-success';
-                    document.getElementById('submitGuess').setAttribute('disabled', 'true');
-                } else if (guess < randomNumber) {
-                    resultDiv.innerHTML = 'Too low! Try a higher number.';
-                    resultDiv.className = 'alert alert-info';
-                } else {
-                    resultDiv.innerHTML = 'Too high! Try a lower number.';
-                    resultDiv.className = 'alert alert-dark';
-                }
-            } else {
-                alert('Please enter a valid number.');
-            }
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
