@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+}
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+ 
+    left: 50%;
+    transform: translate(-50%,50%);
+    background:#fff;
+    border-radius: 10px;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+.container button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
