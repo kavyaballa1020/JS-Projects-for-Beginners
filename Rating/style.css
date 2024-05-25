@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
+  }
+
+  h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .rating-container label {
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+    font-size: 2rem;
+    color: #ccc;
+  }
+
+  .rating-container input[type="checkbox"] {
+    display: none;
+  }
+
+  .rating-container label:before {
+    content: "\f005"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: color 0.3s ease;
+  }
+
+  .rating-container input[type="checkbox"]:checked + label:before,
+  .rating-container input[type="checkbox"]:hover + label:before {
+    color: #ffd700;
+    text-shadow: 0 2px 4px rgb(255, 217, 0);
+  }
+
+  .rating-container input[type="checkbox"]:disabled + label:before {
+    cursor: not-allowed;
+  }
+
+  #btnRate , #btnFeedback{
+    display: block;
+    margin: 0 auto 10px;
+    padding: 10px 20px;
+    background-color: #2b00ff;
+    color: #fff;
+    box-shadow: 0 4px 8px blue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+  #btnRate:hover {
+    background-color: #08005d;
+  }
+
+ 
+  #btnFeedback:hover {
+    background-color: #08005d;
+  }
+
+  #output {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+
+  .feedback {
+    display: none; 
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+
+  .feedback textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1rem;
+    resize: none;
+    border: 1px solid blue;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; 
+  }
+
+  .feedback textarea:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border: 1px solid blue;
+    box-shadow: 0 2px 4px blue;
+
+  }
