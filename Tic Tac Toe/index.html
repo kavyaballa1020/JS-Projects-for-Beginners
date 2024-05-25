@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-5">TIC TAC TOE</h1>
+    <div class="row justify-content-center"> 
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4 square border" id="0" onclick="makeMove(0)"></div>
+              <div class="col-4 square border border-left-0 border-right-0" id="1" onclick="makeMove(1)"></div>
+              <div class="col-4 square border" id="2" onclick="makeMove(2)"></div>
+            </div>
+            <div class="row border-top">
+              <div class="col-4 square border border-top-0" id="3" onclick="makeMove(3)"></div>
+              <div class="col-4 square border border-top-0 border-left-0 border-right-0" id="4" onclick="makeMove(4)"></div>
+              <div class="col-4 square border border-top-0" id="5" onclick="makeMove(5)"></div>
+            </div>
+            <div class="row">
+              <div class="col-4 square border" id="6" onclick="makeMove(6)"></div>
+              <div class="col-4 square border border-left-0 border-right-0" id="7" onclick="makeMove(7)"></div>
+              <div class="col-4 square border" id="8" onclick="makeMove(8)"></div>
+            </div>
+          </div>
+        </div>
+        <div id="main" class="text-center"></div>
+        <div id="status" class="text-center mt-3"></div>
+        <button class="btn btn-danger btn-lg btn-block mt-3" onclick="resetGame()" style="box-shadow: 0 5px 15px rgba(244, 242, 242, 0.5); background: linear-gradient(to right, #d96bec, #22a6e8); border-color: #fffefd; color: white;">
+          Reset Game
+        </button>
+        <div class="text-center mt-3">
+          <button class="btn btn-warning btn-lg" onclick="toggleMode()" style="background: linear-gradient(to right, #775fff, #3f05d1); border-color: #1e00ff; color: white; box-shadow:0 5px 3px rgba(240, 236, 236, 0.692);">Play with Computer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
