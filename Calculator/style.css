@@ -1,0 +1,97 @@
+body {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20240103/pngtree-mesmerizing-composition-of-abstract-textured-dark-design-infused-with-gradient-red-image_13896003.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    height: 100vh;
+  }
+  
+  .calculator {
+    background-color: rgba(18, 17, 17, 0.215);
+    box-shadow: 0 8px 19px rgba(253, 113, 113, 0.59);
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    backdrop-filter: blur(10px);
+  }
+  
+  #display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 15px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.473);
+    color: #000000;
+    border-radius: 25px; 
+    margin-bottom: 30px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.39);
+  }
+  
+  .btn {
+    font-size: 2.0rem;
+    padding: 20px;
+    border-radius: 50% ;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(251, 249, 249, 0.2);
+  }
+  
+  .btn-secondary {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+  }
+  
+  .btn-success {
+    background-color: #d84603;
+    color: #fff;
+    border: none;
+  }
+  .btn-clear {
+    border-radius: 30px;
+  }
+  
+  .btn-danger {
+    background-color: #000000;
+      color: #fff;
+  }
+  
+  .btn:hover {
+    background-color: #787878;
+    box-shadow: 0 6px 12px rgba(196, 196, 196, 0.664);
+    transform: translateY(-2px);
+    color: rgb(255, 255, 255);
+  }
+  
+  .btn-primary:hover {
+    background-color: #222424;
+  }
+  
+  .btn-success:hover {
+    background-color: #ff4000;
+  }
+  
+  .btn-danger:hover {
+    background-color: #cb0606;
+    color: black;
+  }
+  .calculator button.btn-danger:focus,
+  .calculator button.btn-danger:active {
+    outline: none;
+  }
+  
+  
+  @media (max-width: 576px) {
+    .btn {
+      font-size: 1rem; 
+      padding: 10px;
+    }
+  }

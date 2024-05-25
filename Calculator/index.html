@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" id="display" class="form-control mb-2" disabled />
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('7')">7</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('8')">8</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('9')">9</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-block mb-2" onclick="appendToDisplay('/')">÷</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('4')">4</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('5')">5</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('6')">6</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-block mb-2" onclick="appendToDisplay('*')">×</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('1')">1</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('2')">2</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('3')">3</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-block mb-2" onclick="appendToDisplay('-')">−</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('0')">0</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-secondary btn-block mb-2" onclick="appendToDisplay('.')">.</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-success btn-block mb-2" onclick="calculate()">=</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary btn-block mb-2" onclick="appendToDisplay('+')">+</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-danger btn-clear btn-block mb-2" onclick="clearDisplay()">C</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
