@@ -1,64 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-  .container {
-    text-align: center;
-  }
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
 
-  .card {
-    width: 350px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
 
-  .card-header {
-    font-size: 24px;
-    font-weight: bolder;
-    color: #040c78;
-    margin-bottom: 20px;
-  }
+.card-header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-  .quote-text {
-    font-size: 18px;
-    color: #2f2d2d;
-    margin-bottom: 20px;
-    font-weight: bolder;
-  }
+.quote-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #555;
+}
 
-  .btn {
-    background-color: #00ffb7;
-    color: #000000;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: large;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgb(0, 3, 187);
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    
-  }
-
-  .btn:hover {
-    background-color: #01513a;
-    color: white;
-   
-  }
+.btn:hover {
+  background-color: #45a049;
+}
