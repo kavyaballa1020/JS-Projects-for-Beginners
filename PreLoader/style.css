@@ -1,13 +1,17 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
 .home{
         background-image: url("world.jpg");
         background-size: cover;
         display: block;
         height: 100vh;
 }
-svg{
-        align-items: center;
-        text-align: center;
-        position: relative;
-        top: 100% !important;
-        left: 40%;
+.preload{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+       
 }
