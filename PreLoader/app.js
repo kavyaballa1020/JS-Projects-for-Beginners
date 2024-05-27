@@ -3,5 +3,5 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         preload.classList.add('preload-finish');
-    }, 3000); 
+    }, 2000); 
 });
