@@ -7,7 +7,7 @@
         background-image: url("world.jpg");
         background-size: cover;
         display: block;
-        height: 100vh;
+        height: 200px;
 }
 .preload{
         position: fixed;
@@ -16,4 +16,20 @@
         top: 0;
         color: white;
         background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease;
+}
+.preload h1{
+        position: absolute;
+        transform: translateY(-75%);
+}
+svg{
+        position: absolute;
+}
+.preload-finish{
+        opacity: 0;
+        pointer-events: none;
+
 }
