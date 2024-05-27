@@ -1,15 +1,17 @@
-*{
+* {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-}
-.home{
+    }
+    
+    .home {
         background-image: url("world.jpg");
         background-size: cover;
         display: block;
-        height: 200px;
-}
-.preload{
+        height: 100vh;
+    }
+    
+    .preload {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -17,19 +19,28 @@
         color: white;
         background-color: black;
         display: flex;
+        flex-direction: column; /* Added to stack h1 and svg-container vertically */
         align-items: center;
         justify-content: center;
         transition: opacity 0.5s ease;
-}
-.preload h1{
-        position: absolute;
-        transform: translateY(-75%);
-}
-svg{
-        position: absolute;
-}
-.preload-finish{
+        z-index: 999;
+    }
+    
+    .preload h1 {
+        margin-bottom: 20px; /* Added some spacing between h1 and svg-container */
+    }
+    
+    .svg-container {
+        width: 100px; /* Adjust the size of the SVG container as needed */
+        height: 100px;
+    }
+    
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .preload-finish {
         opacity: 0;
         pointer-events: none;
-
-}
+    }
