@@ -8,6 +8,6 @@ window.addEventListener('load', () => {
 
 document.querySelector('.btn').addEventListener('click', (event) => {
     event.preventDefault();
-    const hiddenImage = document.querySelector('.hidden-image');
-    hiddenImage.style.display = 'block';
+    const imageScreen = document.querySelector('.image-screen');
+    imageScreen.classList.remove('hidden');
 });
