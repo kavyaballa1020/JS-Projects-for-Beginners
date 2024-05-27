@@ -4,3 +4,10 @@
         display: block;
         height: 100vh;
 }
+svg{
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: 100% !important;
+        left: 40%;
+}
