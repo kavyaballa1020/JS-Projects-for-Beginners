@@ -2,59 +2,101 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
-    
-    .home {
-        background-image: url("world.jpg");
+        font-family: "Montserrat", sans-serif;
+      }
+      
+      .home {
+        background-image: url("https://source.unsplash.com/random/1920x1080/?nature");
         background-size: cover;
-        display: block;
-        height: 100vh;
+        background-position: center;
+        display: flex;
         align-items: center;
-        color: rgb(0, 0, 0);
+        justify-content: center;
+        height: 100vh;
+        color: #fff;
         text-align: center;
-    }
-    .home h1{
-        font-weight: 60px;
-        font-size: 60px;  
-        padding-top: 200px;
-        text-shadow: 0 4px 4px  white;
-  }
-  .home h2{
-        font-weight: bolder;
-        font-size: 40px;  
-        text-shadow: 0 4px 4px  white;
-  }
-  
-    .preload {
+      }
+      
+      .content {
+        max-width: 800px;
+        padding: 2rem;
+      }
+      
+      .content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        color: rgb(246, 244, 244);
+      }
+      
+      .content h2 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+        color: rgb(246, 244, 244);
+
+      }
+      
+      .btn {
+        display: inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .btn i {
+        margin-left: 0.5rem;
+      }
+      
+      .preload {
         position: fixed;
         width: 100%;
         height: 100vh;
         top: 0;
-        color: white;
-        background-color: rgb(0, 0, 0);
+        color: #fff;
+        background-color: #333;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: opacity 0.5s ease;
         z-index: 999;
-    }
-    
-    .preload h1 {
-        margin-bottom: 20px; 
-    }
-    
-    .svg-container {
-        width: 100px; 
-        height: 100px;
-    }
-    
-    svg {
+      }
+      
+      .preload .svg-container {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 2rem;
+      }
+      
+      .preloader-animation {
         width: 100%;
         height: 100%;
-    }
-    
-    .preload-finish {
+        animation: spin 2s linear infinite;
+      }
+      
+      .preloader-text {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      .preload-finish {
         opacity: 0;
         pointer-events: none;
-    }
+      }
+      
+      .hidden-image {
+        display: none;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }

@@ -5,3 +5,9 @@ window.addEventListener('load', () => {
         preload.classList.add('preload-finish');
     }, 2000); 
 });
+
+document.querySelector('.btn').addEventListener('click', (event) => {
+    event.preventDefault();
+    const hiddenImage = document.querySelector('.hidden-image');
+    hiddenImage.style.display = 'block';
+});
