@@ -1,4 +1,5 @@
-.body{
+.home{
+        background-color: balck;
         background-image: url("world.jpg");
         background-size: cover;
         display: block;
