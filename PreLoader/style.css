@@ -32,7 +32,7 @@ body {
 .content h1, .content h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 8px rgb(0, 0, 0);
 }
 
 .btn {
@@ -61,7 +61,7 @@ body {
   height: 100vh;
   top: 0;
   color: #fff;
-  background-color: #232323;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,7 @@ body {
 
 .preloader-text {
   font-size: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(220, 219, 219, 0.5);
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
 .preload-finish {
