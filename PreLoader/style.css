@@ -1,117 +1,110 @@
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Montserrat", sans-serif;
-      }
-      
-      .home {
-        background-image: url("https://source.unsplash.com/random/1920x1080/?nature");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        color: #fff;
-        text-align: center;
-      }
-      
-      .content {
-        max-width: 800px;
-        padding: 2rem;
-      }
-      
-      .content h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 8px rgb(93, 0, 255);
-        color: rgb(255, 255, 255);
-      }
-      
-      .content h2 {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-        text-shadow: 2px 2px 8px rgb(93, 0, 255);
-        color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
 
-      }
-      
-      .btn {
-        display: inline-block;
-        background-color: #000000;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 1rem 2rem;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-      }
-      
-      .btn:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      .btn i {
-        margin-left: 0.5rem;
-      }
-      
-      .preload {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        color: #fff;
-        background-color: #232323;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.5s ease;
-        z-index: 999;
-      }
-      
-      .preload .svg-container {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 2rem;
-      }
-      
-      .preloader-text {
-        font-size: 1.5rem;
-        text-shadow: 2px 2px 4px rgba(220, 219, 219, 0.5);
-      }
-      
-      .preload-finish {
-        opacity: 0;
-        pointer-events: none;
-      }
-      
-      .image-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 20;
-      }
-      
-      .hidden {
-        display: none;
-      }
-      
-      .full-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .preload.preload-finish {
-        display: none;
-      }
-      
-      
+body {
+  overflow: hidden;
+}
+
+.home {
+  background-image: url("https://source.unsplash.com/random/1920x1080/?nature");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  transition: opacity 1s ease;
+}
+
+.content {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.content h1, .content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.btn i {
+  margin-left: 0.5rem;
+}
+
+.preload {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  color: #fff;
+  background-color: #232323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+.preload .svg-container {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.preloader-text {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(220, 219, 219, 0.5);
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.image-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
