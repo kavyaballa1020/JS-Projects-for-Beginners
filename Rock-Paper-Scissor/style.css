@@ -9,14 +9,17 @@ h1{
     line-height: 5rem;
     text-align: center;
 }
+.choices{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
 .choice{
     width: 200px;
     height: 300px;
     display: flex;
     
 
-}
-img{
-    display: flex;
-    
 }
