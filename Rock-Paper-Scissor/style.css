@@ -8,6 +8,7 @@ h1{
     height: 5rem;
     line-height: 5rem;
     text-align: center;
+    font-size: 40px;
 }
 .choices{
     display: flex;
@@ -20,6 +21,13 @@ h1{
     width: 200px;
     height: 300px;
     display: flex;
-    
-
+}
+.choice :hover{
+    background-color: black;
+    cursor: pointer;
+}
+img{
+    width: 200px;
+    height: 235px;
+    object-fit: cover;
 }
