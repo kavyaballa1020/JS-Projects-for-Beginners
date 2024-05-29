@@ -3,5 +3,20 @@
     padding: 0;
 }
 h1{
+    background-color: rgb(7, 7, 39);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+.choice{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    
+
+}
+img{
+    display: flex;
     
 }
