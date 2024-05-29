@@ -17,17 +17,44 @@ h1{
     gap: 3rem;
     margin-top: 5rem;
 }
-.choice{
+.choice {
     width: 200px;
     height: 300px;
     display: flex;
+    transition: background-color 0.3s ease, transform 0.5s ease; 
 }
-.choice :hover{
-    background-color: black;
+
+.choice:hover {
     cursor: pointer;
+    transform: translateY(-15px); 
 }
+
 img{
     width: 200px;
     height: 235px;
     object-fit: cover;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5rem;
+}
+#user,#comp{
+    font-size: 4rem;
+}
+.msg-container{
+    margin-top: 5rem;
+}
+#msg{
+    background-color:rgb(8, 8, 40) ;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 20px ;
+    display: inline;
+    padding: 1rem ;
 }
