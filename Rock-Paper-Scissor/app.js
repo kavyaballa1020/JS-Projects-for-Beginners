@@ -5,6 +5,7 @@ const choices = document.querySelectorAll(".choice");
 choices.forEach((choice) => {
     console.log(choice);
     choice.addEventListener("click", () => {
-        console.log("choice was clicked");
+        const userchoice=choice.getAttribute("id");
+        console.log(`choice was clicked ${userchoice}`);
     });
 });
