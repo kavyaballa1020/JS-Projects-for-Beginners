@@ -41,20 +41,24 @@ img{
     font-size: 2rem;
     gap: 5rem;
 }
+.score{
+    text-align: center;
+}
 #user,#comp{
     font-size: 4rem;
 }
-.msg-container{
-    margin-top: 5rem;
-}
-#msg{
-    background-color:rgb(8, 8, 40) ;
-    color: white;
+.message-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
-    justify-content: center;
-    align-items: center;
+}
+
+#msg {
+    background-color: rgb(8, 8, 40);
+    color: white;
     font-size: 2rem;
-    border-radius: 20px ;
-    display: inline;
-    padding: 1rem ;
+    border-radius: 20px;
+    padding: 1rem;
 }
