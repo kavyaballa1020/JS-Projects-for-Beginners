@@ -13,10 +13,11 @@ body{
 .wrapper{
     width: 100%;
     max-width: 650px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(3, 116, 120);
+    background-color: rgb(255, 255, 255);
     
 }
 .image-container{
