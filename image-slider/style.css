@@ -19,14 +19,14 @@ body{
     align-items: center;
     background-color: rgb(255, 255, 255);   
 }
-i#prev{
+i #prev{
     left: 25px;
+
 }
-i#next{
+i #next{
     right: 25px;
 }
 .wrapper i.button{
-    position:absolute;
     height: 40px;
     width: 40px;
     border-radius: 50%;
