@@ -17,8 +17,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(255, 255, 255);   
+}
+.wrapper i.button{
+    position:absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(35, 51, 98);
+    color: white;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
 }
 .image-container{
     height: 400px;
