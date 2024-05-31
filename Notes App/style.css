@@ -6,7 +6,7 @@
 
 body {
     background: linear-gradient(to top, rgb(249, 64, 234), rgb(114, 1, 114), black);
-    height: 100vh;
+    height: 150vh;
     background-repeat: no-repeat;
     color: white;
     font-weight: bolder;
@@ -57,17 +57,21 @@ body {
     font-size: large;
     border-radius: 10px;
     border: none;
-    height: 150px;
+    height: 200px;
     width: calc(30% - 20px);
     padding: 10px;
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    background-color: rgba(255, 255, 255, 0.8); 
     position: relative;
 }
 
 .input-block:focus {
     outline: none;
+    border: 2px solid rgba(249, 64, 234, 0.8); 
+    box-shadow: 0 0 10px rgba(249, 64, 234, 0.8); 
+    background-color: rgba(255, 255, 255, 1); 
 }
+
 
 .input-block img {
     width: 40px;
