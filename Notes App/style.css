@@ -5,13 +5,12 @@
 }
 body{
     background: linear-gradient(to top,rgb(249, 64, 234),rgb(114, 1, 114),black);
-    height: 100vh;
+    height:683px;
     background-repeat: no-repeat;
     color: white;
     font-weight: bolder;
 }
 .container{
-    width: 100%;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -19,7 +18,13 @@ body{
     margin-left: 4%;
     right: 0;
 }
-
+.container h1 {
+    margin-bottom: 20px;
+}
+.container button:hover {
+    background: linear-gradient(to top, pink, violet);
+    transform: scale(1.05);
+}
 .container button{
     background:linear-gradient(to top,violet,pink);
     color: rgb(0, 0, 0);
@@ -39,14 +44,20 @@ body{
     border: none;
     height: 150px;
     width: 28%;
+    padding: 10px;
     margin-top: 30px;
     background-color:white;
+    position: relative;
 }
 .input-block:focus{
     outline: none;
 }
-.notes-container img{
+.input-block img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+    right: 15px;
 }
