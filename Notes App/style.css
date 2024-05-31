@@ -60,22 +60,22 @@ body {
     width: calc(30% - 20px);
     padding: 10px;
     margin-top: 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    background-color: rgba(255, 255, 255, 0.8); 
     position: relative;
     height: 300px;
-    max-height: 1000px; /* Set maximum height */
-    overflow-y: auto; /* Enable vertical scroll if content exceeds the height */
-    word-wrap: break-word; /* Break long words to fit within the block */
+    max-height: 1000px; 
+    overflow-y: auto; 
+    word-wrap: break-word;
     display: flex;
-    flex-direction: column; /* Align children vertically */
-    justify-content: space-between; /* Space out children */
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 .input-block:focus {
     outline: none;
-    border: 2px solid rgba(249, 64, 234, 0.8); /* Adds a border on focus */
-    box-shadow: 0 0 10px rgba(249, 64, 234, 0.8); /* Adds a glow effect on focus */
-    background-color: rgba(255, 255, 255, 1); /* Make background fully opaque on focus */
+    border: 2px solid rgba(249, 64, 234, 0.8); 
+    box-shadow: 0 0 10px rgba(249, 64, 234, 0.8); 
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .input-block img {
@@ -83,7 +83,7 @@ body {
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    align-self: flex-end; /* Align image to the end horizontally */
-    margin-top: auto; /* Push the image to the bottom */
+    align-self: flex-end; 
+    margin-top: auto; 
 }
 
