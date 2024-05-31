@@ -3,3 +3,44 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    background: linear-gradient(to top,rgb(249, 64, 234),rgb(114, 1, 114),black);
+    height: 100vh;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: bolder;
+}
+.container{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-left: 4%;
+    right: 0;
+}
+.container button{
+    background:linear-gradient(to top,violet,pink);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 190px;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    height: 40px;
+    margin: 1%;
+    padding: 10px;
+}
+.input-block{
+    color: black;
+    font-size: x-large;
+    border-radius: 10px;
+    border: none;
+    height: 150px;
+    width: 28%;
+    margin-top: 30px;
+    background-color:white;
+}
+.input-block :focus{
+    border: none;
+}
