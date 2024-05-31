@@ -1,32 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{
-    background: linear-gradient(to top,rgb(249, 64, 234),rgb(114, 1, 114),black);
-    height:683px;
+
+body {
+    background: linear-gradient(to top, rgb(249, 64, 234), rgb(114, 1, 114), black);
+    height: 100vh;
     background-repeat: no-repeat;
     color: white;
     font-weight: bolder;
 }
-.container{
+
+.container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     margin-top: 3%;
     margin-left: 4%;
-    right: 0;
+    width: 90%;
 }
+
 .container h1 {
     margin-bottom: 20px;
 }
+
 .container button:hover {
     background: linear-gradient(to top, pink, violet);
     transform: scale(1.05);
 }
-.container button{
-    background:linear-gradient(to top,violet,pink);
+
+.container button {
+    background: linear-gradient(to top, violet, pink);
     color: rgb(0, 0, 0);
     border-radius: 10px;
     width: 190px;
@@ -37,21 +44,31 @@ body{
     margin: 1%;
     padding: 10px;
 }
-.input-block{
+
+.notes-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-block {
     color: black;
     font-size: large;
     border-radius: 10px;
     border: none;
     height: 150px;
-    width: 28%;
-     padding: 10px;
+    width: calc(30% - 20px);
+    padding: 10px;
     margin-top: 30px;
-    background-color:white;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
     position: relative;
 }
-.input-block:focus{
+
+.input-block:focus {
     outline: none;
 }
+
 .input-block img {
     width: 40px;
     height: 40px;
