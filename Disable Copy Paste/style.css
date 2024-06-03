@@ -1,19 +1,27 @@
-body {
-    display: flex;
-    height: 100vh;
-    margin: 0;
-}
-.left, .right {
-    flex: 1;
-    padding: 20px;
+.left {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgb(0, 0, 0);
+    padding: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .left {
-    background-color: #f0f0f0;
-    -webkit-user-select: none;  /* Safari */
-    -moz-user-select: none;     /* Firefox */
-    -ms-user-select: none;      /* Internet Explorer/Edge */
-    user-select: none;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
+
 .right {
-    background-color: #ffffff;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.text-danger {
+    color: #dc3545;
 }

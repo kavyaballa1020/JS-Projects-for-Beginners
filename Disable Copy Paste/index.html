@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disable Copy and Paste</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
-    <div class="left">
-        <p>This content can be copied.</p>
-        <p>Sensitive data: Social Security Number: 123-45-6789</p>
-        <p>Credit Card Number: 1234 5678 9012 3456</p>
-        <p>Personal Identification Number: 9876</p>
-        <p>Email id : abcdefghijk@gmail.com</p>
-        <p>password : 12345</p>
-    </div>
-    <div class="right">
-        <textarea style="width: 100%; height: 100%;" placeholder="You can type here, but you cannot paste content."></textarea>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 py-5 left">
+                <h2 class="text-center mb-4">Sensitive Information</h2>
+                <p>This content can be copied.</p>
+                <p class="text-danger">Social Security Number: 123-45-6789</p>
+                <p class="text-danger">Credit Card Number: 1234 5678 9012 3456</p>
+                <p class="text-danger">Personal Identification Number: 9876</p>
+                <p class="text-danger">Email id: abcdefghijk@gmail.com</p>
+                <p class="text-danger">Password: 12345</p>
+            </div>
+            <div class="col-md-6 py-5 right">
+                <h2 class="text-center mb-4">Write Here</h2>
+                <textarea class="form-control" style="height: 300px;" placeholder="You can type here, but you cannot paste content."></textarea>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
