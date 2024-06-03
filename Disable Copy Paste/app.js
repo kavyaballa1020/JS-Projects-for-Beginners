@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Disable right-click on the left side content
     document.querySelector('.left').addEventListener('contextmenu', function(e) {
         e.preventDefault();
     });
