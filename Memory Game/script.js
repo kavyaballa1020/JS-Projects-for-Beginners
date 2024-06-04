@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fruits = ['🍎', '🍏', '🥭', '🍉', '🍇', '🥥', '🍒', '🍌'];
+    const fruits = ['🍎', '🍏', '🥭', '🍉', '🍇', '🥥', '🍒', '🍌', '🥑', '🌶️'];
     const gameBoard = document.getElementById('game-board');
     const timerElement = document.getElementById('timer');
     const messageElement = document.getElementById('message');
