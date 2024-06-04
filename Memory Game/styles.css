@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to top, rgb(25, 25, 252), rgb(105, 105, 255), rgb(197, 197, 252));
+    background: linear-gradient(to bottom, rgb(85, 85, 255), rgb(105, 105, 255), rgb(185, 185, 254));
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -45,6 +45,7 @@ h1 {
 
 #message {
     margin-top: 20px;
-    font-size: 24px;
-    color: red;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 8px 16px  rgb(68, 0, 255);
 }
