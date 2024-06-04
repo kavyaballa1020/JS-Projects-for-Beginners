@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             secondCard.textContent = '';
 
             resetBoard();
-        }, 1500);
+        }, 800);
     }
 
     // Reset board function
