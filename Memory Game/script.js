@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fruits = ['🍎', '🍏', '🥭', '🍉', '🍇', '🥥', '🍒', '🍌'];
     const gameBoard = document.getElementById('game-board');
+    const timerElement = document.getElementById('timer');
+    const messageElement = document.getElementById('message');
     let cardsArray = [...fruits, ...fruits];
     let hasFlippedCard = false;
     let lockBoard = false;
     let firstCard, secondCard;
+    let matchedPairs = 0;
+    const totalPairs = fruits.length;
+    let timeLeft = 60;
+    let timer;
 
     // Shuffle function
     function shuffle(array) {
@@ -21,6 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', flipCard);
             gameBoard.appendChild(card);
         });
+        startTimer();
+    }
+
+    // Start timer function
+    function startTimer() {
+        timer = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = `Time left: ${timeLeft} seconds`;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                messageElement.textContent = "You failed!";
+                lockBoard = true;
+            }
+        }, 1000);
     }
 
     // Flip card function
@@ -54,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
+
+        matchedPairs++;
+        if (matchedPairs === totalPairs) {
+            clearInterval(timer);
+            messageElement.textContent = "Congratulations! You've matched all the fruits!";
+        }
 
         resetBoard();
     }
