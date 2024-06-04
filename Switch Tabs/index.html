@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Change Detection</title>
+    <script>
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'hidden') {
+               
+                alert('You have switched tabs!');
+            } else {
+                console.log('Welcome back to the tab!');
+            }
+        });
+
+        window.addEventListener('blur', function() {
+            alert('You have switched to another browser or application!');
+        });
+    </script>
+</head>
+<body>
+    <p>Try switching tabs or switching to another browser/application to see the alert messages.</p>
+</body>
+</html>
