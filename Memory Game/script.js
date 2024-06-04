@@ -39,13 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(timer);
                 messageElement.textContent = "You failed!";
                 lockBoard = true;
+                disableAllCards(); // Disable all cards
             }
         }, 1000);
     }
 
     // Flip card function
     function flipCard() {
-        if (lockBoard) return;
+        if (lockBoard) return; // Prevent flip if the board is locked or game is over
         if (this === firstCard) return;
 
         this.classList.add('flipped');
@@ -82,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         resetBoard();
+    }
+
+    // Disable all cards function
+    function disableAllCards() {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => card.removeEventListener('click', flipCard));
     }
 
     // Unflip cards function
