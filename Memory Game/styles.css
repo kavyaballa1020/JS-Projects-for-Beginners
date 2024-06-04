@@ -3,14 +3,16 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to top,blue,rgb(82, 82, 251),rgb(197, 197, 252));
+    background: linear-gradient(to top,rgb(25, 25, 252),rgb(105, 105, 255),rgb(197, 197, 252));
     background-repeat: no-repeat;
     height: 100vh;
 }
 
 h1 {
     margin: 20px;
-    color: #333;
+    color: #000000;
+    font-size:50px;
+    text-shadow: 0 3px 9px  white;
 }
 
 #game-board {
@@ -22,9 +24,10 @@ h1 {
 .card {
     width: 100px;
     height: 100px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: #10004e;
+    border: 2px solid #ccc;
     display: flex;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     font-size: 40px;

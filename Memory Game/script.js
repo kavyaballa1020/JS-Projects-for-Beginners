@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fruits = ['🍎', '🍊', '🍋', '🍉', '🍇', '🍓', '🍒', '🥭'];
+    const fruits = ['🍎', '🍏', '🥭', '🍉', '🍇', '🥥', '🍒', '🍌'];
     const gameBoard = document.getElementById('game-board');
     let cardsArray = [...fruits, ...fruits];
     let hasFlippedCard = false;
