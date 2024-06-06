@@ -5,7 +5,7 @@ function showSideBar(){
 
 }
 function closeSideBar(){
-    const close=document.querySelector(".sidebar");
+    const sideBar=document.querySelector(".sidebar");
 
-    close.style.display="none";
+   sideBar.style.display="none";
 }
