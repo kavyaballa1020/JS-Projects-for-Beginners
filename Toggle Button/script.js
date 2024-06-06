@@ -4,3 +4,8 @@ function showSideBar(){
    sideBar.style.display="flex";
 
 }
+function closeSideBar(){
+    const close=document.querySelector(".sidebar");
+
+    close.style.display="none";
+}
