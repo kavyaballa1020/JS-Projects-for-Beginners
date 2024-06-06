@@ -52,7 +52,6 @@ nav li:first-child{
     width: 250px;
     box-shadow: -10px 0 10px black;
     font-size: 20px;
-    font-weight: bold;
     z-index: 999;
     align-items: flex-start;
     flex-direction: column;
@@ -64,6 +63,8 @@ nav li:first-child{
 }
 .sidebar a{
     text-align: center;
+    text-shadow: -1px 0 1px white;
+
 
 }
 .sidebar a:hover{
@@ -72,16 +73,18 @@ nav li:first-child{
 .x{
     position:relative;
     top: 10px;
-    right: 10px;
     width: 8% !important;
     cursor: pointer;
 }
 
-@media (max-width:600px){
+@media (max-width:800px){
     .hideOnMobile{
         display: none;
     }
-    .hideOnScreen{
-        display: none;
+    
+}
+@media (max-width:400px){
+    .sidebar{
+        width: 100%;
     }
 }
