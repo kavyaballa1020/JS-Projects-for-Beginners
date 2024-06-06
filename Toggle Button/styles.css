@@ -76,12 +76,16 @@ nav li:first-child{
     width: 8% !important;
     cursor: pointer;
 }
-
+.hideOnScreen{
+    display: none;
+}
 @media (max-width:800px){
     .hideOnMobile{
         display: none;
     }
-    
+    .hideOnScreen{
+        display:block;
+    }
 }
 @media (max-width:400px){
     .sidebar{
