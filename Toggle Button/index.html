@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Toggle Button</title>
 </head>
@@ -10,20 +11,20 @@
     <nav>
         <ul class="sidebar">
             <li class="x" onclick="closeSideBar()"><a href="#">✖</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
         <ul>
-            <li ><a href="#">Kavya</a></li>
-            <li class="hideOnMobile"><a href="#">Home</a></li>
-            <li class="hideOnMobile"><a href="#">About</a></li>
-            <li class="hideOnMobile"><a href="#">Skills</a></li>
-            <li class="hideOnMobile"><a href="#">Projects</a></li>
-            <li class="hideOnMobile"><a href="#">Contact</a></li>
-            <li onclick=showSideBar()><a href="#">☰</a></li>
+            <li ><a href="#"><i class="fas fa-fire"></i> Kavya</a></li>
+            <li class="hideOnMobile"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li class="hideOnMobile"><a href="#"><i class="fas fa-user"></i> About</a></li>
+            <li class="hideOnMobile"><a href="#"><i class="fas fa-code"></i> Skills</a></li>
+            <li class="hideOnMobile"><a href="#"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li class="hideOnMobile"><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li class="hideOnScreen" onclick=showSideBar()><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
     </nav>
     <script src="script.js"></script>
