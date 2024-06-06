@@ -60,9 +60,22 @@ nav li:first-child{
 .sidebar li{
     width: 100%;
 }
-.x{
-    left: 20%;
+.sidebar a{
+    width: 100%;
+    text-align: center;
 }
+.sidebar a:hover{
+    background-color: rgba(0, 0, 0, 0.176);
+}
+.x{
+    position:relative;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    width: 8% !important;
+    cursor: pointer;
+}
+
 @media (max-width:600px){
     .hideOnMobile{
         display: none;
