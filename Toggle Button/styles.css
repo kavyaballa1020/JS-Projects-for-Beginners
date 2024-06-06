@@ -36,3 +36,28 @@ nav a{
 nav a:hover{
     background-color: rgba(0, 0, 0, 0.176);
 }
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.211);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 250px;
+    box-shadow: -10px 0 10px black;
+    font-size: 20px;
+    font-weight: bolder;
+    z-index: 999;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.sidebar li{
+    width: 100%;
+}
+
