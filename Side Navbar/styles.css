@@ -1,33 +1,39 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-  }
-  
-  .sidenav {
+}
+
+.sidenav {
     height: 100%;
     width: 200px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #333;
+    background: linear-gradient(to bottom, #333, #222); /* Gradient background */
     padding-top: 20px;
-  }
-  
-  .sidenav a {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.sidenav a {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
     color: #fff;
     display: block;
-  }
-  
-  .sidenav a:hover {
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sidenav a:hover {
     background-color: #555;
-  }
-  
-  .main {
+}
+
+.main {
     margin-left: 220px;
     padding: 20px;
-  }
-  
+}
+
+/* Add a subtle hover effect for the main content */
+.main:hover {
+    transform: scale(1.005);
+}
