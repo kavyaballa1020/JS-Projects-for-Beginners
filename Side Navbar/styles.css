@@ -72,3 +72,27 @@ body{
     line-height: 50px;
     text-align: center;
 }
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    align-items: center;
+    top: 14px ;
+    font-size: 22px;
+    color: white;
+    left: 15px;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
