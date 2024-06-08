@@ -33,7 +33,7 @@ body{
 .sidebar #btn{
     position: absolute;
     color: #fff;
-    left: 90%;
+    left: 13%;
     top: 6px;
     font-size: 20px;
     height: 50px;
@@ -41,4 +41,34 @@ body{
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+.sidebar ul li a:hover{
+    color: black;
+    background: #fff;
+}
+.sidebar ul li a li{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
 }
