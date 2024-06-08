@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Side Navbar</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
 
 <div class="sidenav">
-  <a href="#home">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#services">Services</a>
-  <a href="#case-studies">Case Studies</a>
-  <a href="#blog">Blog</a>
-  <a href="#contact">Contact</a>
+  <div class="brand">Your Brand</div>
+  <a href="#home"><i class="fas fa-home"></i> Home</a>
+  <a href="#about"><i class="fas fa-users"></i> About Us</a>
+  <a href="#services"><i class="fas fa-cogs"></i> Services</a>
+  <a href="#case-studies"><i class="fas fa-briefcase"></i> Case Studies</a>
+  <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+  <a href="#contact"><i class="fas fa-address-book"></i> Contact</a>
+  <form class="search-form" action="#">
+    <input type="text" placeholder="Search...">
+    <button type="submit"><i class="fas fa-search"></i></button>
+  </form>
+  <div class="profile">
+    <img src="profile-pic.jpg" alt="Profile Picture">
+    <span class="profile-name">John Doe</span>
+  </div>
 </div>
 
 <div class="main">
