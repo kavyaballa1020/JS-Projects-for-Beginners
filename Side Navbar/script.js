@@ -1,12 +1,21 @@
-let btn = document.querySelector("#btn");
 let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
 
-btn.onclick = function () {
-    sidebar.classList.toggle("active");
-}
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
 
-let searchIcon = document.querySelector(".bx-search");
+searchBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();
+});
 
-searchIcon.onclick = function () {
-    sidebar.classList.toggle("active");
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+ }
 }
