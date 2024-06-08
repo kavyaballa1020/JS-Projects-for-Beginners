@@ -92,7 +92,7 @@ body {
     border: none;
     outline: none;
     font-size: 16px;
-    background: #1d1b31;
+    background: #161422;
     color: #fff;
     transition: background 0.4s;
 }
@@ -107,6 +107,7 @@ body {
     left: 10px;
     transform: translateY(-50%);
     color: #fff;
+    
 }
 
 .sidebar .profile-content {
@@ -124,14 +125,6 @@ body {
     display: flex;
     align-items: center;
     margin-right: 10px;
-}
-
-.profile-content .profile .profile-details img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover;
 }
 
 .sidebar .profile-content .profile .profile-details .name-job {
@@ -170,67 +163,10 @@ body {
 .sidebar.close .profile-content .profile .profile-details {
     display: none;
 }
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 80px;
-    }
-
-    .sidebar .nav-list li a {
-        justify-content: center;
-    }
-
-    .sidebar .nav-list li a span {
-        display: none;
-    }
-
-    .sidebar .logo-content .logo .logo-name,
-    .sidebar .profile-content .profile .profile-details {
-        display: none;
-    }
-
-    .sidebar .nav-list li input {
-        padding-left: 30px;
-    }
-
-    .sidebar .nav-list li .bx-search {
-        left: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .sidebar .nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar .nav-list li {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .sidebar .nav-list li a {
-        justify-content: flex-start;
-        padding: 10px 20px;
-    }
-
-    .sidebar .nav-list li a i {
-        margin-right: 10px;
-    }
-
-    .sidebar .nav-list li a span {
-        display: inline;
-    }
-
-    .sidebar .profile-content {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0;
-    }
+.profile-content .profile .profile-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
 }
