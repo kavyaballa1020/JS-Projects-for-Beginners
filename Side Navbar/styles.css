@@ -19,6 +19,37 @@ body {
     transition: all 0.3s ease;
 }
 
+.sidenav.collapsed {
+    width: 80px;
+}
+
+.sidenav.collapsed .brand,
+.sidenav.collapsed .nav-links a span,
+.sidenav.collapsed .profile-info {
+    display: none;
+}
+
+.sidenav.collapsed .nav-links a {
+    text-align: center;
+}
+
+.sidenav.collapsed .nav-links a i {
+    margin-right: 0;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
+
 .brand {
     font-size: 24px;
     font-weight: 900;
@@ -85,9 +116,13 @@ body {
     font-size: 18px;
     color: #fff;
     border-radius: 50px;
-    display: block;
-    width: 60%;
+    display: flex;
+    align-items: center;
     transition: all 0.3s ease;
+}
+
+.nav-links a i {
+    margin-right: 10px;
 }
 
 .nav-links a:hover {
@@ -138,6 +173,10 @@ body {
     border-radius: 5px;
     background-color: #fff;
     transition: all 0.3s ease;
+}
+
+.sidenav.collapsed ~ .main {
+    margin-left: 100px;
 }
 
 .main:hover {
