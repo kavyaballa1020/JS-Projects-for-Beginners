@@ -62,7 +62,6 @@ body {
     font-size: 20px;
     cursor: pointer;
     margin: 10px;
-    align-self: flex-end; /* This moves the button to the right side */
 }
 
 .toggle-btn:focus {
@@ -133,15 +132,17 @@ body {
     text-decoration: none;
     margin-left: 10px;
     font-size: 18px;
-    color: #fff;
+    color: #ffffff;
     border-radius: 50px;
     display: flex;
+    width: 60%;
     align-items: center;
     transition: all 0.3s ease;
 }
 
 .nav-links a i {
-    margin-right: 20px; /* Adjusted margin to create a gap between icons and text */
+    margin-right: 10px !important;
+    flex-shrink: 0;
 }
 
 .nav-links a:hover {
@@ -195,7 +196,7 @@ body {
 }
 
 .sidenav.collapsed ~ .main {
-    margin-left: 100px;
+    margin-left: 90px;
 }
 
 .main:hover {
